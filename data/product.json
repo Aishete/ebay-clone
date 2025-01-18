@@ -1,0 +1,72 @@
+{
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Discover the latest gadgets and technology at great prices",
+      "image": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=2000"
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "description": "Trendy clothing and accessories for every style",
+      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=2000"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "categoryId": "electronics",
+      "title": "Apple iPhone 13 Pro - 128GB - Graphite (Unlocked)",
+      "price": 899.99,
+      "images": [
+        "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1603891128711-11b4b03bb138?auto=format&fit=crop&q=80&w=800"
+      ],
+      "condition": "New",
+      "freeShipping": true,
+      "stock": 50,
+      "seller": {
+        "id": "tech-hub",
+        "name": "TechHub Store",
+        "rating": 4.8,
+        "sales": 15243
+      },
+      "description": "• 6.1-inch Super Retina XDR display with ProMotion\n• Pro camera system with new 12MP Telephoto, Wide, and Ultra Wide cameras\n• A15 Bionic chip for lightning-fast performance\n• Up to 28 hours of video playback\n• 5G capable for superfast downloads and streaming",
+      "specs": {
+        "Screen Size": "6.1 inches",
+        "Storage": "128GB",
+        "Color": "Graphite",
+        "Model": "iPhone 13 Pro",
+        "Connectivity": "5G",
+        "Operating System": "iOS 15"
+      }
+    },
+    {
+      "id": "2",
+      "categoryId": "electronics",
+      "title": "Sony PlayStation 5 Console - Digital Edition",
+      "price": 449.99,
+      "images": [
+        "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&q=80&w=800"
+      ],
+      "condition": "New",
+      "freeShipping": true,
+      "stock": 25,
+      "seller": {
+        "id": "game-store",
+        "name": "GameStore Official",
+        "rating": 4.9,
+        "sales": 8432
+      },
+      "description": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio.",
+      "specs": {
+        "Storage": "825GB",
+        "CPU": "AMD Zen 2",
+        "GPU": "10.28 TFLOPs, AMD RDNA 2",
+        "RAM": "16GB GDDR6"
+      }
+    }
+  ]
+}
