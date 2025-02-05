@@ -1,10 +1,9 @@
-
-import productData from '../../data/product.json';
+import data from '../../data/product.json';
 
 export function getAllProducts() {
-  return productData;
+  return data.products;
 }
 
-export function getProductById(id: number) {
-  return productData.find(product => product.id === id);
+export function getProductById(id: string) {
+  return data.products.find(product => product.id === id);
 }

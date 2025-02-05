@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/ProductCard';
 import { Card, CardContent } from '@/components/ui/card';
@@ -111,7 +112,9 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-6">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map((product) => (
-            <ProductCard key={product.id} {...product} />
+            <Link href={`/product/${product.id}`} key={product.id}>
+              <ProductCard {...product} />
+            </Link>
           ))}
         </div>
       </section>

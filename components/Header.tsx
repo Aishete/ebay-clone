@@ -12,9 +12,10 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 
+import { useCart } from '@/context/CartContext';
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState('');
-
+  const { totalItems } = useCart();
   const categories = [
     'Electronics',
     'Fashion',
@@ -50,14 +51,14 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/wishlist">
-              <Button variant="ghost" size="icon">
-                <Heart className="h-5 w-5" />
-              </Button>
-            </Link>
             <Link href="/cart">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {totalItems}
+                  </span>
+                )}
               </Button>
             </Link>
             <DropdownMenu>

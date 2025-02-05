@@ -67,6 +67,58 @@
         "GPU": "10.28 TFLOPs, AMD RDNA 2",
         "RAM": "16GB GDDR6"
       }
+    },
+    {
+      "id": "3",
+      "categoryId": "fashion",
+      "title": "Nike Air Jordan 1 Retro High OG",
+      "price": 179.99,
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&q=80&w=500"
+      ],
+      "condition": "New",
+      "freeShipping": true,
+      "stock": 100,
+      "seller": {
+        "id": "nike-official",
+        "name": "Nike Official Store",
+        "rating": 4.9,
+        "sales": 25678
+      },
+      "description": "The Air Jordan 1 Retro High OG returns with classic styling and premium materials. Full-grain leather in the upper ages to perfection while providing a royal look and feel.",
+      "specs": {
+        "Style": "High-top",
+        "Material": "Full-grain leather",
+        "Closure": "Lace-up",
+        "Sole": "Rubber"
+      }
+    },
+    {
+      "id": "4",
+      "categoryId": "electronics",
+      "title": "Samsung 65\" Class OLED 4K Smart TV",
+      "price": 1799.99,
+      "images": [
+        "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=500"
+      ],
+      "condition": "New",
+      "freeShipping": true,
+      "stock": 15,
+      "seller": {
+        "id": "samsung-store",
+        "name": "Samsung Official Store",
+        "rating": 4.7,
+        "sales": 12456
+      },
+      "description": "Experience breathtaking 4K resolution and over a billion shades of color with Quantum HDR. The ultra-powerful processor automatically upscales content for sharp detail and refined color.",
+      "specs": {
+        "Screen Size": "65 inches",
+        "Resolution": "4K Ultra HD",
+        "Display Type": "OLED",
+        "Smart Platform": "Tizen",
+        "HDR": "Quantum HDR",
+        "Refresh Rate": "120Hz"
+      }
     }
   ]
 }

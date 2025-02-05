@@ -1,9 +1,11 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
-import { Heart } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card, CardContent, CardFooter } from './ui/card';
+import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
+import { ShoppingCart } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
+import { Button } from './ui/button';
 
 interface ProductCardProps {
   id: string;
@@ -11,43 +13,53 @@ interface ProductCardProps {
   price: number;
   image: string;
   condition: string;
-  freeShipping?: boolean;
+  freeShipping: boolean;
 }
 
-export default function ProductCard({ id, title, price, image, condition, freeShipping }: ProductCardProps) {
+export default function ProductCard(props: ProductCardProps) {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent navigation if card is wrapped in Link
+    addToCart({
+      id: props.id,
+      title: props.title,
+      price: props.price,
+      image: props.image,
+      quantity: 1
+    });
+  };
+
   return (
-    <Card className="group overflow-hidden">
-      <CardContent className="p-0">
-        <Link href={`/product/${id}`}>
-          <div className="relative aspect-square">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover transition-transform group-hover:scale-105"
-            />
-          </div>
-        </Link>
-      </CardContent>
-      <CardFooter className="flex-col items-start gap-2 p-4">
-        <div className="flex items-start justify-between w-full">
-          <Link href={`/product/${id}`}>
-            <h3 className="font-medium line-clamp-2 hover:underline">{title}</h3>
-          </Link>
-          <Button variant="ghost" size="icon" className="ml-2 flex-shrink-0">
-            <Heart className="h-4 w-4" />
+    <Card className="group hover:shadow-lg transition-shadow">
+      <CardContent className="p-4">
+        <div className="relative aspect-square mb-3">
+          <Image
+            src={props.image}
+            alt={props.title}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <h3 className="font-semibold text-sm mb-2 line-clamp-2">{props.title}</h3>
+        <div className="flex items-center justify-between">
+          <span className="text-lg font-bold">${props.price.toFixed(2)}</span>
+          <Button
+            size="icon"
+            onClick={handleAddToCart}
+          >
+            <ShoppingCart className="h-4 w-4" />
           </Button>
         </div>
-        <div className="flex items-center gap-2">
-          <Badge variant="secondary">{condition}</Badge>
-          {freeShipping && (
-            <Badge variant="outline" className="text-green-600">
-              Free Shipping
-            </Badge>
+        <div className="flex gap-2 mt-2">
+          {props.condition && (
+            <Badge variant="secondary">{props.condition}</Badge>
+          )}
+          {props.freeShipping && (
+            <Badge variant="secondary">Free Shipping</Badge>
           )}
         </div>
-        <p className="text-lg font-semibold">${price.toFixed(2)}</p>
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 }
