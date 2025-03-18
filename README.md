@@ -1,4 +1,4 @@
-eBay E-commerce Clone
+# eBay E-commerce Clone
 
 This project is a Group Assignment for the E-commerce course (IT4C01) during the academic year 2024-2025 at the Royal University of Law and Economics (RULE).
 Group Information
