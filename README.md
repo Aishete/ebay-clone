@@ -13,7 +13,7 @@ Members
 - Em HAI  
 - Panha OI
 
-Project Setup
+# Project Setup
 
 Follow the steps below to set up and run the project locally.
 1. Clone the Project
