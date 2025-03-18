@@ -30,7 +30,8 @@ Navigate to the project directory and install the required npm packages:
 bash
 Copy
 ```bash
-npm install
+
+cd ebay-clone/ebay-clone &&npm install
 ```
 3. Run the Development Server
 
