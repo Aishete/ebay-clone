@@ -31,7 +31,7 @@ bash
 Copy
 ```bash
 
-cd ebay-clone/ebay-clone &&npm install
+cd ebay-clone/ebay-clone && npm install
 ```
 3. Run the Development Server
 
